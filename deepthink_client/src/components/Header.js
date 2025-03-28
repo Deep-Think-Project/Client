@@ -7,7 +7,7 @@ function Header() {
     <>
       <div className="header-container">
         <img src={logo} alt="logo" className="logo" />
-        <div className="service-name">deep think</div>
+        <div className="service-name">Deep Think</div>
       </div>
       <hr />
     </>
