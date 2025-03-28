@@ -4,7 +4,6 @@
     align-items: center; /* 세로 중앙 정렬 */
     justify-content: space-between; /* 좌우 정렬: 로고는 왼쪽, 버튼은 오른쪽 */
     padding: 20px 40px; /* 내부 여백 설정 */
-    background-color: #ebecf0; /* 배경색 설정 */
     position: relative; /* 내부 절대 위치 요소 배치를 위한 기준 설정 */
 }
 

@@ -4,7 +4,6 @@
     flex-direction: column; /* 요소를 세로 방향으로 정렬 */
     align-items: center; /* 가운데 정렬 */
     padding: 100px 20px; /* 상단과 하단에 여백 추가 */
-    background-color: #ebecf0; /* 배경색 설정 */
     min-height: calc(100vh - 120px); /* 화면 높이에서 헤더(예상 높이 120px)를 제외한 최소 높이 설정 */
 }
 
