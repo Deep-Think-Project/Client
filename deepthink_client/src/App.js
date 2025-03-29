@@ -1,33 +1,23 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import axios from 'axios';
 import './App.css';
 import MainPage from './pages/MainPage';
+import LoadingPage from './pages/LoadingPage'
+import ResultPage from './pages/ResultPage';
+
 
 //서버 킬 때마다 주소 받아와서 package.json에서 proxy 바꿔주기
 
 function App() {
-  const [test, setTest] = useState('');
-  useEffect(() => {
-    axios.get('/main_app/test/',
-      {headers: {
-        "ngrok-skip-browser-warning": "true",  // 🚀 ngrok 경고 페이지 스킵
-      },}
-    )
-      .then(response => {
-        console.log(response.data);                // 객체 전체 콘솔 출력
-        setTest(response.data.message);            // 상태로 message만 저장!
-      })
-      .catch(error => console.error('Error:', error));
-  }, []);
+  const [loading, setLoading] = useState(false);  // 로딩 상태
 
   return (
     <div>
-      {/* <li>{test}</li>   */}
-        <Routes>
-          <Route path="/" element={<MainPage/>} />
-        </Routes>
-      
+      <Routes>
+        <Route path="/" element={<MainPage setLoading={setLoading}/>} />
+        <Route path="/loading" element={<LoadingPage loading={loading}/>} />
+        <Route path="/result" element={<ResultPage />} />
+      </Routes>
     </div>
   );
 }

@@ -7,14 +7,14 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.8.3",
+    "axios": "^1.8.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.4.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "proxy": "https://850b-2001-2d8-218e-f3c3-1c41-48c4-d9b5-d8d7.ngrok-free.app",
+  "proxy": "http://127.0.0.1:8000/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
