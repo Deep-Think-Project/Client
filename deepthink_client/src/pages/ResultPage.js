@@ -12,8 +12,8 @@ function ResultPage() {
       <div>
         {result ? (
           <div>
-            <p>{result.input}</p> 
-            <p>{result.type}</p>  
+            <p>{result.type}</p> 
+            <p>{JSON.stringify(result.output)}</p> 
           </div>
         ) : (
           <p>결과를 불러올 수 없습니다.</p>
