@@ -31,17 +31,7 @@ function Progress({ loading }) {
             </div>
             {/* 퍼센트 표시 */}
             <p className="percentage">{percentage}%</p>
-
-            {/* 툴팁 부분: 초록색과 보라색 사각형과 텍스트 */}
-            <div className="tooltip-container">
-                <div className="tooltip-box green-box"></div>
-                <span className="tooltip-text">:  객관적인 근거를 가진 문장</span>
             </div>
-            <div className="tooltip-container">
-                <div className="tooltip-box purple-box"></div>
-                <span className="tooltip-text">:  다양한 해석이 가능한 문장</span>
-            </div>
-        </div>
     );
 }
 

@@ -42,34 +42,3 @@
     width: 100%;  /* 너비 100% */
     justify-content: center;  /* 자식 요소를 수평 중앙 정렬 */
 }
-
-/* .tooltip-box: 각 툴팁 박스 (사각형 모양) */
-.tooltip-box {
-    width: 50px;  /* 너비 50px */
-    height: 20px;  /* 높이 20px */
-    margin-right: 10px;  /* 오른쪽 여백 10px */
-}
-
-/* .green-box: 초록색 툴팁 박스 */
-.green-box {
-    background-color: #20fd00;  /* 초록색 배경 */
-}
-
-/* .purple-box: 보라색 툴팁 박스 */
-.purple-box {
-    background-color: #d096f8;  /* 보라색 배경 */
-}
-
-/* .tooltip-text: 툴팁 텍스트 스타일 */
-.tooltip-text {
-    font-size: 14px;  /* 글자 크기 14px */
-}
-
-/* .tooltips-section: 툴팁들(초록색, 보라색)을 감싸는 섹션 */
-.tooltips-section {
-    display: flex;  /* flexbox 사용 */
-    flex-direction: column;  /* 세로 방향으로 툴팁 배치 */
-    align-items: center;  /* 중앙 정렬 */
-    margin-top: 20px;  /* 위쪽 여백 20px */
-    width: 100%;  /* 너비 100% */
-}
