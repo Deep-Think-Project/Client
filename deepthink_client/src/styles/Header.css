@@ -37,6 +37,15 @@ hr {
     height: 2px; /* 선의 높이 설정 */
     background: linear-gradient(to right, #82218c, #0603b2); /* 선에 그라디언트 적용 */
     margin: 0; /* 기본 마진 제거 */
+
+      /* 페이지 전체 너비를 차지하도록 추가된 속성 */
+    width: 100vw; /* viewport 너비 사용 */
+    position: relative; /* 상대 위치 설정 */
+    left: 50%; /* 왼쪽으로 50% 이동 */
+    right: 50%; /* 오른쪽으로 50% 이동 */
+    margin-left: -50vw; /* 왼쪽 마진을 viewport 너비의 절반만큼 음수로 설정 */
+    margin-right: -50vw; /* 오른쪽 마진을 viewport 너비의 절반만큼 음수로 설정 */
+    box-sizing: border-box; /* 박스 크기 계산 방식 설정 */
 }
 
 /* 📱 태블릿 (768px 이하) */
