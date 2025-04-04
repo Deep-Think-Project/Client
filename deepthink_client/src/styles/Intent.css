@@ -1,0 +1,31 @@
+.intent-container {
+    padding: 20px; /* 컨테이너 안쪽 여백 설정 */
+}
+
+
+.intent-title {
+    display: flex; /* 내부 요소를 가로로 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    margin-bottom: 5px; /* 제목 아래쪽 마진 설정 */
+}
+
+.intent-title-dot {
+    width: 12px; /* 원형 점의 너비 설정 */
+    height: 12px; /* 원형 점의 높이 설정 */
+    background: linear-gradient(to right, #82218c, #0603b2); /* 배경을 그라디언트 색상으로 설정 */
+    border-radius: 50%; /* 원형 모양으로 만들기 */
+    margin-right: 10px; /* 오른쪽 마진 설정 (텍스트와 간격) */
+}
+
+.intent-title-text {
+    font-size: 20px; /* 글자 크기 설정 */
+    font-weight: bold; /* 글자 굵기 설정 */
+    color: #000000; /* 글자 색상 설정 (검정) */
+}
+
+.intent-content {
+    padding: 10px; /* 내용 영역의 안쪽 여백 설정 */
+    line-height: 1.6; /* 줄 간격 설정 */
+    font-size: 16px; /* 글자 크기 설정 */
+}
+
