@@ -3,14 +3,12 @@ import Header from "../components/Header"
 import Summary from "../components/Summary"
 import Intent from "../components/Intent"
 import Sentences from "../components/Sentences"
-import Result from "./data.json"
 import "../styles/ResultPage.css"
 
 function ResultPage() {
   // 📌 네비게이션을 통해 전달된 데이터 가져오기
   const location = useLocation()
-  // const result = location.state?.result;
-  const result = Result
+  const result = location.state?.result;
 
   return (
     <div className="result-page">
