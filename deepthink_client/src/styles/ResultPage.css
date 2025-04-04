@@ -1,0 +1,36 @@
+.result-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.main-divider {
+  
+  height: 2px;
+  background: linear-gradient(to right, #82218c, #0603b2);
+  width: 100vw; /* viewport 너비 사용 */
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
+}
+
+.error-message {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
