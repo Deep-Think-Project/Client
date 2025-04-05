@@ -4,29 +4,34 @@ import Summary from "../components/Summary"
 import Intent from "../components/Intent"
 import Sentences from "../components/Sentences"
 import "../styles/ResultPage.css"
+import logo from "../assets/logo.png"
 
 function ResultPage() {
-  // 📌 네비게이션을 통해 전달된 데이터 가져오기
   const location = useLocation()
   const result = location.state?.result;
 
   return (
     <div className="result-page">
+      {/* Add watermark logo */}
+      <div className="watermark-logo">
+        <img src={logo || "/placeholder.svg"} alt="Watermark" />
+      </div>
+
       {/* ✅ 헤더 컴포넌트 */}
       <Header />
 
       {/* ✅ result 데이터가 있을 경우 출력 */}
       {result ? (
         <div className="content">
-          <Summary summary={result.output.summary} />
+          <Summary summary={result.results.summary} />
 
           <div className="main-divider"></div>
 
-          <Intent intent={result.output.intent} />
+          <Intent intent={result.results.author_intent} />
 
           <div className="main-divider"></div>
 
-          <Sentences sentences={result.output.sentences} />
+          <Sentences sentences={result.sentences.map((sentence) => ({ ...sentence, reason: sentence.reason || [] }))} />
         </div>
       ) : (
         // ✅ result가 없을 경우 에러 메시지
@@ -37,4 +42,3 @@ function ResultPage() {
 }
 
 export default ResultPage
-
