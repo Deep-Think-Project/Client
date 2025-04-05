@@ -19,7 +19,7 @@ const ToolTip = () => {
         <div className="right-section">
           {/* 보라색 박스 */}
           <div className="purple-box">
-            <div className="purple-title">우리나라 경제는 망하고 있다.</div>
+            <div className="purple-title">인공지능이 인간을 지배할 것이다.</div>
           </div>
           <ul className="purple-list">
             <li>여러가지 해석이 가능한 문장</li>
