@@ -27,7 +27,7 @@ const Sentences = ({ sentences }) => {
   }
 
   // reason이 없으면 클릭 방지 및 스타일 비활성화
-  const isClickable = (item) => !!item.reason
+  const isClickable = (item) => item.reason && item.reason.length > 0
 
   return (
     <div className="sentences-container">
@@ -63,12 +63,55 @@ const Sentences = ({ sentences }) => {
           </div>
 
           <div className="reason-content">
-            {selectedIndex !== null ? (
-              <p>{sentences[selectedIndex].reason}</p>
+            {selectedIndex !== null && selectedIndex < sentences.length ? (
+              <p>{sentences[selectedIndex].reason}</p> // 문자열을 바로 출력
             ) : (
               <p className="placeholder-text">하이라이트 된 텍스트를 클릭해보세요</p>
             )}
           </div>
+          {/* 다른 해석 */}
+          <div className="interpretation-display">
+            {selectedIndex !== null && selectedIndex < sentences.length && sentences[selectedIndex].other_interpretations ? (
+              <>
+                <div className="interpretation-title">
+                  <div className="interpretation-title-dot"></div>
+                  <div className="interpretation-title-text">다른 해석</div>
+                </div>
+                <div className="interpretation-content">
+                  <ul>
+                    {sentences[selectedIndex].other_interpretations.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </>
+            ) : null}
+          </div>
+
+          {/* 참고 자료 (references) */}
+          <div className="reference-display">
+            {selectedIndex !== null && selectedIndex < sentences.length && sentences[selectedIndex].references?.length > 0 ? (
+              <div className="reference-display">
+              <div className="reference-title">
+              <div className="reference-title-dot"></div>
+              <div className="reference-title-text">참고 자료</div>
+            </div>
+          <div className="reference-content">
+          <ul>
+        {sentences[selectedIndex].references.map((ref, i) => (
+          <li key={i}>
+            <a href={ref.url} target="_blank" rel="noopener noreferrer">
+              {ref.source_title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+) : null}
+
+          </div>
+
         </div>
       </div>
     </div>

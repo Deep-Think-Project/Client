@@ -8,8 +8,9 @@ function LoadingPage({ loading }) {
   return (
     <div>
       <Header /> 
-      <p><Progress loading={loading}/></p>
       <p><ToolTip/></p>
+
+      <p><Progress loading={loading}/></p>
     </div>
   );
 }
