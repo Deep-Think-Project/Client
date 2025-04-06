@@ -4,11 +4,43 @@
   margin-bottom: 20px; /* 아래쪽 마진 추가 */
 }
 
-/* 문장 섹션 제목 스타일 */
+/* 문장 섹션 제목 레이아웃 수정 */
 .sentences-title {
   display: flex; /* 가로 정렬 */
   align-items: center; /* 수직 중앙 정렬 */
   margin-bottom: 5px; /* 아래쪽 마진 */
+  justify-content: space-between; /* 양쪽 정렬 */
+  width: 100%; /* 전체 너비 사용 */
+}
+
+/* 제목 왼쪽 부분 */
+.sentences-title-left {
+  display: flex;
+  align-items: center;
+}
+
+/* 제목 오른쪽 부분 */
+.sentences-title-right {
+  display: flex;
+  gap: 10px; /* 박스 사이 간격 */
+}
+
+/* 제목 옆 박스 공통 스타일 */
+.title-box {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* 초록색 박스 스타일 */
+.title-box.highlight-green {
+  background-color: #a7f49b; /* 연두색 배경 */
+}
+
+/* 보라색 박스 스타일 */
+.title-box.highlight-purple {
+  background-color: #ddb2fc; /* 연한 보라색 배경 */
 }
 
 /* 문장 섹션 제목 왼쪽 점 스타일 */
@@ -141,10 +173,9 @@
   line-height: 1.6; /* 줄 간격 */
 }
 
-
 /* 선택되지 않았을 때 나오는 안내 문구 스타일 */
 .reason-content .placeholder-text {
-  color: #B1B2B5; /* 회색 */
+  color: #b1b2b5; /* 회색 */
   text-align: center; /* 가운데 정렬 */
 }
 
@@ -214,4 +245,15 @@
     width: 100%; /* 전체 너비 */
     background: linear-gradient(to bottom, #82218c, #0603b2); /* 보라색-파란색 그라디언트 */
   }
+
+  .sentences-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sentences-title-right {
+    margin-top: 10px;
+    width: 100%;
+  }
 }
+

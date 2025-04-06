@@ -11,7 +11,7 @@ function Progress({ loading }) {
             // 로딩 중이면 진행 바 증가
             interval = setInterval(() => {
                 setPercentage(prev => (prev < 99 ? prev + 1 : 99));
-            }, 50);
+            }, 303); // 대략 20초
         } else {
             // 로딩이 끝나면 진행 바 100%
             setPercentage(100);
