@@ -32,8 +32,14 @@ const Sentences = ({ sentences }) => {
   return (
     <div className="sentences-container">
       <div className="sentences-title">
-        <div className="sentences-title-dot"></div>
-        <div className="sentences-title-text">분석 결과</div>
+        <div className="sentences-title-left">
+          <div className="sentences-title-dot"></div>
+          <div className="sentences-title-text">분석 결과</div>
+        </div>
+        <div className="sentences-title-right">
+          <div className="title-box highlight-green">명료한 문장</div>
+          <div className="title-box highlight-purple">모호한 문장</div>
+        </div>
       </div>
 
       <div className="sentences-content">
@@ -71,7 +77,9 @@ const Sentences = ({ sentences }) => {
           </div>
           {/* 다른 해석 */}
           <div className="interpretation-display">
-            {selectedIndex !== null && selectedIndex < sentences.length && sentences[selectedIndex].other_interpretations ? (
+            {selectedIndex !== null &&
+            selectedIndex < sentences.length &&
+            sentences[selectedIndex].other_interpretations ? (
               <>
                 <div className="interpretation-title">
                   <div className="interpretation-title-dot"></div>
@@ -90,28 +98,28 @@ const Sentences = ({ sentences }) => {
 
           {/* 참고 자료 (references) */}
           <div className="reference-display">
-            {selectedIndex !== null && selectedIndex < sentences.length && sentences[selectedIndex].references?.length > 0 ? (
+            {selectedIndex !== null &&
+            selectedIndex < sentences.length &&
+            sentences[selectedIndex].references?.length > 0 ? (
               <div className="reference-display">
-              <div className="reference-title">
-              <div className="reference-title-dot"></div>
-              <div className="reference-title-text">참고 자료</div>
-            </div>
-          <div className="reference-content">
-          <ul>
-        {sentences[selectedIndex].references.map((ref, i) => (
-          <li key={i}>
-            <a href={ref.url} target="_blank" rel="noopener noreferrer">
-              {ref.source_title}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </div>
-) : null}
-
+                <div className="reference-title">
+                  <div className="reference-title-dot"></div>
+                  <div className="reference-title-text">참고 자료</div>
+                </div>
+                <div className="reference-content">
+                  <ul>
+                    {sentences[selectedIndex].references.map((ref, i) => (
+                      <li key={i}>
+                        <a href={ref.url} target="_blank" rel="noopener noreferrer">
+                          {ref.source_title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ) : null}
           </div>
-
         </div>
       </div>
     </div>
@@ -119,3 +127,4 @@ const Sentences = ({ sentences }) => {
 }
 
 export default Sentences
+
