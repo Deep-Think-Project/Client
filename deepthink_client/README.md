@@ -94,13 +94,13 @@ To run this frontend locally:
 1. **Set your backend proxy URL**
    In the project root, open your `package.json` file and set the `proxy` field to your backend server URL
 
-```json
+   ```json
    // package.json
    {
      ...
      "proxy": "http://your_proxy_address"
    }
-```
+   ```
 
 2. **Install dependencies**  
    ```
