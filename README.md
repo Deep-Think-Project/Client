@@ -1,4 +1,4 @@
-# Deep Think Frontend
+# Deep Think Project
 
 This project provides the frontend interface for the Deep Think service — a critical reading tool that uses AI to analyze and classify sentences from articles as either **clear** or **ambiguous**. It enables users to easily interact with the underlying analysis engine through an intuitive web-based experience.
 
@@ -24,7 +24,7 @@ This project provides the frontend interface for the Deep Think service — a cr
 Copy a news article URL or drag-select and copy text.  
 Paste it into the **search bar**, then click the **Analyze** button.
 
-![Main Page](path/to/main-page.png)
+![Image](https://github.com/user-attachments/assets/ae69b3d7-d8a9-47f6-adc1-18854bacea2b)
 
 ---
 
@@ -32,7 +32,7 @@ Paste it into the **search bar**, then click the **Analyze** button.
 
 While processing, Deep Think analyzes each sentence and classifies it into one of two categories.
 
-![Loading Page](path/to/loading-page.png)
+![Image](https://github.com/user-attachments/assets/293c3f2f-7d37-4b7f-93ee-e380ae338cb6)
 
 ---
 
@@ -41,13 +41,13 @@ While processing, Deep Think analyzes each sentence and classifies it into one o
 - **Summary & Author Intent**:  
   A brief summary and author perspective are displayed at the top.  
 
-  ![Summary Section](path/to/summary.png)
+  ![Image](https://github.com/user-attachments/assets/02e556ee-2bf6-4b29-9087-97bf510c714a)
 
 - **Highlighted Sentences**:  
   The full text is annotated using colored highlights.  
   Green = clear, Purple = ambiguous.
 
-  ![Highlighted Sentences](path/to/highlight.png)
+  ![Image](https://github.com/user-attachments/assets/42adc691-88d8-4330-b273-9c6cf3b79323)
 
 - **Interactive Tooltips**:  
   Clicking on a sentence reveals additional insights:
@@ -55,17 +55,17 @@ While processing, Deep Think analyzes each sentence and classifies it into one o
   - **For clear (green) sentences**:
     - The classification rationale
 
+  ![Image](https://github.com/user-attachments/assets/63b09e98-ad02-410a-85f5-8fdd34edcb3f)
+
   - **For ambiguous (purple) sentences**:
     - The classification rationale  
     - Additional interpretations  
     - Related reference links (when available)
 
-  ![Tooltip Interaction](path/to/tooltip.png)
+  ![Image](https://github.com/user-attachments/assets/5d1466e7-e6fe-406a-bbb4-91804dd82fa1)
 
 - **Reference Material**:  
   External links open in a new tab and provide supporting sources for ambiguous sentences.
-
-  ![Reference Click](path/to/reference.png)
 
 ---
 
