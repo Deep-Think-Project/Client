@@ -36,24 +36,6 @@ While processing, Deep Think analyzes each sentence and classifies it into one o
 
 ---
 
-### ✅ Green Tooltip (Clear)
-
-Indicates a **clear sentence** — factual and unambiguous.  
-These sentences are easily interpreted in one way.
-
-![Green Tooltip](path/to/green-tooltip.png)
-
----
-
-### 🟣 Purple Tooltip (Ambiguous)
-
-Indicates an **ambiguous sentence** — containing bias, tone, or multiple valid interpretations.  
-Encourages deeper thought and exploration.
-
-![Purple Tooltip](path/to/purple-tooltip.png)
-
----
-
 ### 📊 Result Page
 
 - **Summary & Author Intent**:  
