@@ -13,7 +13,7 @@
 .main-divider {
   height: 2px;
   background: linear-gradient(to right, #82218c, #0603b2);
-  width: 100vw; /* viewport 너비 사용 */
+  width: 100vw;
   display: block;
   margin: 0;
   padding: 0;
@@ -33,7 +33,6 @@
   color: #666;
 }
 
-/* Watermark Logo Styling */
 .watermark-logo {
   position: fixed;
   top: 0;
@@ -43,20 +42,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  pointer-events: none; /* Makes the logo non-interactive */
-  z-index: 0; /* Places it behind the content */
+  pointer-events: none;
+  z-index: 0;
 }
 
 .watermark-logo img {
   max-width: 109%;
-  opacity: 0.3; /* Makes the logo very transparent */
-  filter: blur(2px); /* Adds a slight blur effect */
+  opacity: 0.3;
+  filter: blur(2px);
 }
 
-/* Ensure content appears above the watermark */
 .content,
 .header-container {
   position: relative;
   z-index: 1;
 }
-

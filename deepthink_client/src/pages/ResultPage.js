@@ -1,44 +1,64 @@
-import { useLocation } from "react-router-dom"
-import Header from "../components/Header"
-import Summary from "../components/Summary"
-import Intent from "../components/Intent"
-import Sentences from "../components/Sentences"
-import "../styles/ResultPage.css"
-import logo from "../assets/logo.png"
+import { useLocation } from "react-router-dom";
+import Header from "../components/Header";
+import Summary from "../components/Summary";
+import Intent from "../components/Intent";
+import Sentences from "../components/Sentences";
+import "../styles/ResultPage.css";
+import logo from "../assets/logo.png";
 
+/**
+ * ResultPage Component
+ *
+ * This component is responsible for rendering the results page after user input is processed.
+ * It extracts the result object passed via React Router's location state and conditionally renders:
+ * - A watermark logo
+ * - A Header component
+ * - A Summary of the content
+ * - An analysis of the author's intent
+ * - A list of key sentences with their reasoning
+ *
+ * If the `result` object is not available, it displays an error message.
+ */
 function ResultPage() {
-  const location = useLocation()
+  const location = useLocation();
   const result = location.state?.result;
 
   return (
     <div className="result-page">
-      {/* Add watermark logo */}
+      {/* Watermark logo overlay for branding */}
       <div className="watermark-logo">
         <img src={logo || "/placeholder.svg"} alt="Watermark" />
       </div>
 
-      {/* ✅ 헤더 컴포넌트 */}
+      {/* Global header */}
       <Header />
 
-      {/* ✅ result 데이터가 있을 경우 출력 */}
       {result ? (
         <div className="content">
+          {/* Summary of the analyzed text */}
           <Summary summary={result.results.summary} />
 
           <div className="main-divider"></div>
 
+          {/* Detected author intent */}
           <Intent intent={result.results.author_intent} />
 
           <div className="main-divider"></div>
 
-          <Sentences sentences={result.sentences.map((sentence) => ({ ...sentence, reason: sentence.reason || [] }))} />
+          {/* Key sentences with optional reasoning */}
+          <Sentences
+            sentences={result.sentences.map((sentence) => ({
+              ...sentence,
+              reason: sentence.reason || []
+            }))}
+          />
         </div>
       ) : (
-        // ✅ result가 없을 경우 에러 메시지
-        <div className="error-message">결과를 불러올 수 없습니다.</div>
+        // Display an error message if result data is missing
+        <div className="error-message">Unable to load result data.</div>
       )}
     </div>
-  )
+  );
 }
 
-export default ResultPage
+export default ResultPage;

@@ -1,112 +1,98 @@
-/* 전체 컨테이너 스타일 */
 .container {
-    background-color: #ebecf0; /* 배경색 설정 */
-    padding: 20px; /* 내부 여백 */
-    font-family: sans-serif; /* 폰트 설정 */
-    display: flex; /* 플렉스 박스 사용 */
-    flex-direction: column; /* 세로 정렬 */
-    align-items: center; /* 중앙 정렬 */
-    width: 100%; /* 전체 너비 사용 */
+    background-color: #ebecf0;
+    padding: 20px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
-/* 설명 텍스트 스타일 */
 .description {
-    font-weight: bold; /* 글자 굵기 설정 */
-    text-align: center; /* 중앙 정렬 */
-    margin-bottom: 35px; /* 아래 여백 */
-    font-size: 18px; /* 글자 크기 */
-    color: #000000; /* 글자 색상 */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 18px;
+    color: #000000;
 }
 
-/* 하이라이트 컨테이너 스타일 */
 .highlight-container {
-    display: flex; /* 가로 정렬 */
-    justify-content: space-between; /* 좌우 정렬 */
-    width: 100%; /* 전체 너비 사용 */
-    max-width: 800px; /* 최대 너비 제한 */
-    gap: 35px; /* 요소 간 간격 */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    gap: 35px;
 }
 
-/* 좌측 및 우측 섹션 스타일 */
 .left-section,
 .right-section {
-    display: flex; /* 플렉스 박스 사용 */
-    flex-direction: column; /* 세로 정렬 */
-    align-items: center; /* 중앙 정렬 */
-    width: 100%; /* 전체 너비 사용 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
-/* 초록색 및 보라색 박스 스타일 */
 .green-box,
 .purple-box {
-    padding: 5px; /* 내부 여백 */
-    width: 300px; /* 너비 설정 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    margin-bottom: 10px; /* 아래 여백 */
+    padding: 5px;
+    width: 300px;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-/* 초록색 박스 배경색 설정 */
 .green-box {
     background-color: #a7f49b;
 }
 
-/* 보라색 박스 배경색 설정 */
 .purple-box {
     background-color: #ddb2fc;
 }
 
-/* 초록색 및 보라색 제목 스타일 */
 .green-title,
 .purple-title {
-    color: #000000; /* 글자 색상 */
-    font-size: 16px; /* 글자 크기 */
+    color: #000000;
+    font-size: 16px;
     font-weight: bold;
 }
 
-/* 초록색 및 보라색 리스트 스타일 */
 .green-list,
 .purple-list {
-    list-style-type: disc; /* 리스트 스타일 설정 */
-    padding-left: 20px; /* 왼쪽 여백 */
-    margin: 0; /* 기본 마진 제거 */
-    width: 100%; /* 전체 너비 사용 */
-    max-width: 300px; /* 최대 너비 제한 */
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+    width: 100%;
+    max-width: 300px;
 }
 
-/* 리스트 아이템 스타일 */
 .green-list li,
 .purple-list li {
-    margin-bottom: 5px; /* 아이템 간 간격 */
-    color: #000000; /* 글자 색상 */
+    margin-bottom: 5px;
+    color: #000000;
 }
 
-/* 진행 바 컨테이너 스타일 */
 .progress-container {
-    width: 100%; /* 전체 너비 사용 */
-    max-width: 700px; /* 최대 너비 제한 */
-    margin: 20px auto; /* 위아래 마진 적용 */
-    text-align: center; /* 중앙 정렬 */
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
 }
 
-/* 진행 바 스타일 */
 .progress-bar {
-    height: 20px; /* 높이 설정 */
-    background-color: #ffffff; /* 배경색 설정 */
-    border-radius: 10px; /* 모서리 둥글게 */
-    overflow: hidden; /* 넘치는 부분 숨김 */
-    border: 1px solid #000000; /* 테두리 설정 */
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #000000;
 }
 
-/* 진행 상태 표시 스타일 */
 .progress-fill {
-    height: 100%; /* 전체 높이 사용 */
-    background: linear-gradient(90deg, #6a0dad, #d096f8); /* 그라디언트 적용 */
-    width: 30%; /* 진행률 설정 */
-    border-radius: 10px 0 0 10px; /* 왼쪽 모서리 둥글게 */
+    height: 100%;
+    background: linear-gradient(90deg, #6a0dad, #d096f8);
+    width: 30%;
+    border-radius: 10px 0 0 10px;
 }
 
-/* 진행 바 텍스트 스타일 */
 .progress-text {
-    margin-top: 5px; /* 위쪽 여백 */
-    font-size: 14px; /* 글자 크기 */
+    margin-top: 5px;
+    font-size: 14px;
 }

@@ -1,31 +1,26 @@
-/* 전체 컨테이너 설정 */
 .sentences-container {
-  padding: 20px; /* 내부 여백 설정 */
-  margin-bottom: 20px; /* 아래쪽 마진 추가 */
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
-/* 문장 섹션 제목 레이아웃 수정 */
 .sentences-title {
-  display: flex; /* 가로 정렬 */
-  align-items: center; /* 수직 중앙 정렬 */
-  margin-bottom: 5px; /* 아래쪽 마진 */
-  justify-content: space-between; /* 양쪽 정렬 */
-  width: 100%; /* 전체 너비 사용 */
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  width: 100%;
 }
 
-/* 제목 왼쪽 부분 */
 .sentences-title-left {
   display: flex;
   align-items: center;
 }
 
-/* 제목 오른쪽 부분 */
 .sentences-title-right {
   display: flex;
-  gap: 10px; /* 박스 사이 간격 */
+  gap: 10px;
 }
 
-/* 제목 옆 박스 공통 스타일 */
 .title-box {
   padding: 5px 10px;
   border-radius: 4px;
@@ -33,217 +28,186 @@
   font-weight: normal;
 }
 
-/* 초록색 박스 스타일 */
 .title-box.highlight-green {
-  background-color: #a7f49b; /* 연두색 배경 */
+  background-color: #a7f49b;
 }
 
-/* 보라색 박스 스타일 */
 .title-box.highlight-purple {
-  background-color: #ddb2fc; /* 연한 보라색 배경 */
+  background-color: #ddb2fc;
 }
 
-/* 문장 섹션 제목 왼쪽 점 스타일 */
 .sentences-title-dot {
-  width: 12px; /* 원 크기 */
+  width: 12px;
   height: 12px;
-  background: linear-gradient(to right, #82218c, #0603b2); /* 보라색-파란색 그라디언트 */
-  border-radius: 50%; /* 원형 유지 */
-  margin-right: 10px; /* 오른쪽 간격 */
+  background: linear-gradient(to right, #82218c, #0603b2);
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
-/* 문장 섹션 제목 텍스트 스타일 */
 .sentences-title-text {
-  font-size: 20px; /* 글씨 크기 */
-  font-weight: bold; /* 굵은 글씨 */
-  color: #000000; /* 검정색 */
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
 }
 
-/* 문장 및 이유 컨텐츠 컨테이너 */
 .sentences-content {
-  display: flex; /* 가로 배치 */
-  width: 100%; /* 부모 크기 맞춤 */
-  overflow: visible; /* 내부 콘텐츠가 넘쳐도 보이도록 설정 */
+  display: flex;
+  width: 100%;
+  overflow: visible;
 }
 
-/* 왼쪽 문장 목록 */
 .sentence-list {
-  flex: 6; /* 60% 너비 */
-  padding: 20px; /* 내부 여백 */
-  display: flex; /* 세로 배치 */
-  flex-direction: column; /* 세로 정렬 */
-  gap: 1px; /* 문장 간격 */
+  flex: 6;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
 }
 
-/* 오른쪽 이유 표시 영역 */
 .reason-display {
-  flex: 4; /* 40% 너비 */
-  padding: 20px; /* 내부 여백 */
-  position: sticky; /* 스크롤 시 고정 */
-  top: 0; /* 화면 상단에서 고정 */
-  align-self: flex-start; /* 상단 정렬 */
-  max-height: 100vh; /* 최대 높이 설정 */
-  overflow-y: auto; /* 세로 스크롤 허용 */
+  flex: 4;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
-/* 이유 섹션 제목 스타일 */
 .reason-title {
-  display: flex; /* 가로 정렬 */
-  align-items: center; /* 수직 중앙 정렬 */
-  margin-bottom: 5px; /* 아래쪽 마진 */
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
-/* 이유 섹션 제목 왼쪽 점 스타일 */
 .reason-title-dot {
-  width: 12px; /* 원 크기 */
+  width: 12px;
   height: 12px;
-  background: linear-gradient(to right, #82218c, #0603b2); /* 보라색-파란색 그라디언트 */
-  border-radius: 50%; /* 원형 유지 */
-  margin-right: 10px; /* 오른쪽 간격 */
+  background: linear-gradient(to right, #82218c, #0603b2);
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
-/* 이유 섹션 제목 텍스트 스타일 */
 .reason-title-text {
-  font-size: 18px; /* 글씨 크기 */
-  font-weight: bold; /* 굵은 글씨 */
-  color: #000000; /* 검정색 */
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
 }
 
-/* 이유 컨텐츠 스타일 */
 .reason-content {
-  padding: 10px; /* 내부 여백 */
-  line-height: 1.6; /* 줄 간격 */
+  padding: 10px;
+  line-height: 1.6;
 }
 
-/* 다른 해석 섹션 제목 스타일 */
 .interpretation-title {
-  display: flex; /* 가로 정렬 */
-  align-items: center; /* 수직 중앙 정렬 */
-  margin-bottom: 5px; /* 아래쪽 마진 */
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
-/* 다른 해석 섹션 제목 왼쪽 점 스타일 */
 .interpretation-title-dot {
-  width: 12px; /* 원 크기 */
+  width: 12px;
   height: 12px;
-  background: linear-gradient(to right, #82218c, #0603b2); /* 보라색-파란색 그라디언트 */
-  border-radius: 50%; /* 원형 유지 */
-  margin-right: 10px; /* 오른쪽 간격 */
+  background: linear-gradient(to right, #82218c, #0603b2);
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
-/* 다른 해석 섹션 제목 텍스트 스타일 */
 .interpretation-title-text {
-  font-size: 18px; /* 글씨 크기 */
-  font-weight: bold; /* 굵은 글씨 */
-  color: #000000; /* 검정색 */
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
 }
 
-/* 다른 해석 컨텐츠 스타일 */
 .interpretation-content {
-  padding: 10px; /* 내부 여백 */
-  line-height: 1.6; /* 줄 간격 */
+  padding: 10px;
+  line-height: 1.6;
 }
 
-/* 참고 자료 섹션 제목 스타일 */
 .reference-title {
-  display: flex; /* 가로 정렬 */
-  align-items: center; /* 수직 중앙 정렬 */
-  margin-bottom: 5px; /* 아래쪽 마진 */
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
-/* 참고 자료 섹션 제목 왼쪽 점 스타일 */
 .reference-title-dot {
-  width: 12px; /* 원 크기 */
+  width: 12px;
   height: 12px;
-  background: linear-gradient(to right, #82218c, #0603b2); /* 보라색-파란색 그라디언트 */
-  border-radius: 50%; /* 원형 유지 */
-  margin-right: 10px; /* 오른쪽 간격 */
+  background: linear-gradient(to right, #82218c, #0603b2);
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
-/* 참고 자료 섹션 제목 텍스트 스타일 */
 .reference-title-text {
-  font-size: 18px; /* 글씨 크기 */
-  font-weight: bold; /* 굵은 글씨 */
-  color: #000000; /* 검정색 */
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
 }
 
-/* 참고 자료 컨텐츠 스타일 */
 .reference-content {
-  padding: 10px; /* 내부 여백 */
-  line-height: 1.6; /* 줄 간격 */
+  padding: 10px;
+  line-height: 1.6;
 }
 
-/* 선택되지 않았을 때 나오는 안내 문구 스타일 */
 .reason-content .placeholder-text {
-  color: #b1b2b5; /* 회색 */
-  text-align: center; /* 가운데 정렬 */
+  color: #b1b2b5;
+  text-align: center;
 }
 
-/* 세로 구분선 스타일 */
 .divider {
-  width: 2px; /* 두께 */
-  background: linear-gradient(to right, #82218c, #0603b2); /* 보라색-파란색 그라디언트 */
+  width: 2px;
+  background: linear-gradient(to right, #82218c, #0603b2);
 }
 
-/* 문장 항목 스타일 */
 .sentence-item {
-  padding: 3px; /* 내부 여백 */
-  cursor: pointer; /* 클릭 가능 */
-  transition: all 0.2s ease; /* 부드러운 전환 효과 */
-  margin-bottom: 4px; /* 아래쪽 간격 */
-  position: relative; /* 상대 위치 설정 */
+  padding: 3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 4px;
+  position: relative;
 }
 
-/* 강조된 텍스트 스타일 */
 .highlight-text {
-  position: relative; /* 상대 위치 설정 */
-  box-decoration-break: clone; /* 여러 줄에서도 강조 유지 */
-  -webkit-box-decoration-break: clone; /* Safari 대응 */
-  padding: 2px 4px; /* 내부 여백 */
-  line-height: 1.7; /* 줄 간격 */
+  position: relative;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  padding: 2px 4px;
+  line-height: 1.7;
 }
 
-/* 문장 유형별 강조 색상 */
-/* 명확한 문장 (초록색 강조) */
 .highlight-green .highlight-text {
-  background-color: #a7f49b; /* 연두색 배경 */
+  background-color: #a7f49b;
 }
 
-/* 애매한 문장 (보라색 강조) */
 .highlight-purple .highlight-text {
-  background-color: #ddb2fc; /* 연한 보라색 배경 */
+  background-color: #ddb2fc;
 }
 
-/* 클릭 시 활성화 상태 */
-/* 명확한 문장 클릭 시 초록색 테두리 */
 .active-green .highlight-text {
   box-shadow: 0 0 0 2px #067815;
   font-weight: bold;
 }
 
-/* 애매한 문장 클릭 시 보라색 테두리 */
 .active-purple .highlight-text {
   box-shadow: 0 0 0 2px #82218c;
   font-weight: bold;
 }
 
-/* 반응형 디자인: 화면 너비 768px 이하일 때 */
 @media (max-width: 768px) {
   .sentences-content {
-    flex-direction: column; /* 세로 정렬 */
+    flex-direction: column;
   }
 
   .sentence-list,
   .reason-display {
-    flex: 1; /* 동일한 너비 */
-    width: 100%; /* 전체 너비 */
+    flex: 1;
+    width: 100%;
   }
 
-  /* 모바일에서는 구분선을 가로로 표시 */
   .divider {
-    height: 1px; /* 두께 */
-    width: 100%; /* 전체 너비 */
-    background: linear-gradient(to bottom, #82218c, #0603b2); /* 보라색-파란색 그라디언트 */
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to bottom, #82218c, #0603b2);
   }
 
   .sentences-title {
@@ -256,4 +220,3 @@
     width: 100%;
   }
 }
-

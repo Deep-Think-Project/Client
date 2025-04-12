@@ -1,36 +1,60 @@
-"use client"
+import { useState } from "react";
+import "../styles/Sentences.css";
 
-import { useState } from "react"
-import "../styles/Sentences.css"
-
+/**
+ * Sentences Component
+ *
+ * This component displays a list of analyzed sentences classified by type (e.g., clear or ambiguous).
+ * When a sentence is selected, it shows an explanation, alternate interpretations, and references.
+ *
+ * Props:
+ * - sentences (array): An array of sentence objects with the following structure:
+ *   {
+ *     sentence: string,
+ *     type: "clear_sentence" | "ambiguous_sentence",
+ *     reason: string | array,
+ *     other_interpretations?: string[],
+ *     references?: [{ url: string, source_title: string }]
+ *   }
+ */
 const Sentences = ({ sentences }) => {
-  const [selectedIndex, setSelectedIndex] = useState(null)
+  const [selectedIndex, setSelectedIndex] = useState(null); // Tracks the index of the currently selected sentence
 
-  // 문장 타입별 스타일 맵핑
+  /**
+   * Returns a CSS class based on the sentence type
+   * Used to highlight sentences visually by category
+   */
   const getSentenceClass = (type) => {
     switch (type) {
       case "clear_sentence":
-        return "highlight-green"
+        return "highlight-green";
       case "ambiguous_sentence":
-        return "highlight-purple"
+        return "highlight-purple";
       default:
-        return ""
+        return "";
     }
-  }
+  };
 
-  // 클릭 시 테두리 스타일 결정
+  /**
+   * Returns a class that applies an active border if the sentence is selected
+   * The color matches the sentence type
+   */
   const getActiveClass = (index, type) => {
     if (selectedIndex === index) {
-      return type === "clear_sentence" ? "active-green" : "active-purple"
+      return type === "clear_sentence" ? "active-green" : "active-purple";
     }
-    return ""
-  }
+    return "";
+  };
 
-  // reason이 없으면 클릭 방지 및 스타일 비활성화
-  const isClickable = (item) => item.reason && item.reason.length > 0
+  /**
+   * Determines if a sentence is clickable
+   * Only sentences with non-empty reason fields are interactable
+   */
+  const isClickable = (item) => item.reason && item.reason.length > 0;
 
   return (
     <div className="sentences-container">
+      {/* Header Section: Label and legend for sentence types */}
       <div className="sentences-title">
         <div className="sentences-title-left">
           <div className="sentences-title-dot"></div>
@@ -43,25 +67,27 @@ const Sentences = ({ sentences }) => {
       </div>
 
       <div className="sentences-content">
+        {/* List of analyzed sentences */}
         <div className="sentence-list">
           {sentences.map((item, index) => {
-            const clickable = isClickable(item)
+            const clickable = isClickable(item);
             return (
               <div
                 key={index}
                 className={`sentence-item ${getSentenceClass(item.type)} ${getActiveClass(index, item.type)} ${!clickable ? "disabled" : ""}`}
                 onClick={() => {
-                  if (clickable) setSelectedIndex(index)
+                  if (clickable) setSelectedIndex(index);
                 }}
               >
                 <span className="highlight-text">{item.sentence}</span>
               </div>
-            )
+            );
           })}
         </div>
 
         <div className="divider"></div>
 
+        {/* Explanation Section */}
         <div className="reason-display">
           <div className="reason-title">
             <div className="reason-title-dot"></div>
@@ -70,16 +96,17 @@ const Sentences = ({ sentences }) => {
 
           <div className="reason-content">
             {selectedIndex !== null && selectedIndex < sentences.length ? (
-              <p>{sentences[selectedIndex].reason}</p> // 문자열을 바로 출력
+              <p>{sentences[selectedIndex].reason}</p>
             ) : (
               <p className="placeholder-text">하이라이트 된 텍스트를 클릭해보세요</p>
             )}
           </div>
-          {/* 다른 해석 */}
+
+          {/* Alternate Interpretations */}
           <div className="interpretation-display">
             {selectedIndex !== null &&
-            selectedIndex < sentences.length &&
-            sentences[selectedIndex].other_interpretations ? (
+              selectedIndex < sentences.length &&
+              sentences[selectedIndex].other_interpretations ? (
               <>
                 <div className="interpretation-title">
                   <div className="interpretation-title-dot"></div>
@@ -96,11 +123,11 @@ const Sentences = ({ sentences }) => {
             ) : null}
           </div>
 
-          {/* 참고 자료 (references) */}
+          {/* Reference Links */}
           <div className="reference-display">
             {selectedIndex !== null &&
-            selectedIndex < sentences.length &&
-            sentences[selectedIndex].references?.length > 0 ? (
+              selectedIndex < sentences.length &&
+              sentences[selectedIndex].references?.length > 0 ? (
               <div className="reference-display">
                 <div className="reference-title">
                   <div className="reference-title-dot"></div>
@@ -123,8 +150,7 @@ const Sentences = ({ sentences }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Sentences
-
+export default Sentences;

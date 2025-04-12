@@ -2,14 +2,14 @@ body {
   margin: 0;
   padding: 0;
   background-color: #ebecf0;
-  overflow-x: hidden; /* 가로 스크롤 막기 */
+  overflow-x: hidden;
 }
 
 .main-page {
-  height: 100vh; /* 화면을 꽉 채우도록 설정 */
-  overflow: hidden; /* MainPage에서 세로 스크롤 막기 */
-  position: fixed; /* 추가: 전체 화면 고정 */
-  width: 100%; /* 추가: 전체 너비 사용 */
-  top: 0; /* 추가: 상단에 고정 */
-  left: 0; /* 추가: 좌측에 고정 */
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
