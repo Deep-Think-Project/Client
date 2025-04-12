@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# Deep Think Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project provides the frontend interface for the Deep Think service — a critical reading tool that uses AI to analyze and classify sentences from articles as either **clear** or **ambiguous**. It enables users to easily interact with the underlying analysis engine through an intuitive web-based experience.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- Accepts a **URL** or **copied text** via the input search bar  
+- Visualizes AI-powered classification results in two types:
+  - **Clear sentence**: Objectively interpretable or fact-based
+  - **Ambiguous sentence**: Subjective, emotional, or open to multiple interpretations  
+- Offers **sentence-level tooltips** to explain each classification  
+- Provides **summary and author intent analysis** after sentence classification  
+- Links ambiguous sentences to **external references** for deeper insight  
+- Fully responsive user interface with smooth transitions and tooltip overlays  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧭 How to Use
 
-### `npm test`
+### 🏠 Main Page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Copy a news article URL or drag-select and copy text.  
+Paste it into the **search bar**, then click the **Analyze** button.
 
-### `npm run build`
+![Main Page](path/to/main-page.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ⏳ Loading Page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+While processing, Deep Think analyzes each sentence and classifies it into one of two categories.
 
-### `npm run eject`
+![Loading Page](path/to/loading-page.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### ✅ Green Tooltip (Clear)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Indicates a **clear sentence** — factual and unambiguous.  
+These sentences are easily interpreted in one way.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Green Tooltip](path/to/green-tooltip.png)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🟣 Purple Tooltip (Ambiguous)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Indicates an **ambiguous sentence** — containing bias, tone, or multiple valid interpretations.  
+Encourages deeper thought and exploration.
 
-### Code Splitting
+![Purple Tooltip](path/to/purple-tooltip.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+### 📊 Result Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Summary & Author Intent**:  
+  A brief summary and author perspective are displayed at the top.  
 
-### Making a Progressive Web App
+  ![Summary Section](path/to/summary.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Highlighted Sentences**:  
+  The full text is annotated using colored highlights.  
+  Green = clear, Purple = ambiguous.
 
-### Advanced Configuration
+  ![Highlighted Sentences](path/to/highlight.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Interactive Tooltips**:  
+  Clicking on a sentence reveals additional insights:
 
-### Deployment
+  - **For clear (green) sentences**:
+    - The classification rationale
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  - **For ambiguous (purple) sentences**:
+    - The classification rationale  
+    - Additional interpretations  
+    - Related reference links (when available)
 
-### `npm run build` fails to minify
+  ![Tooltip Interaction](path/to/tooltip.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Reference Material**:  
+  External links open in a new tab and provide supporting sources for ambiguous sentences.
+
+  ![Reference Click](path/to/reference.png)
+
+---
+
+## ⚙️ Setup Instructions
+
+To run this frontend locally:
+
+1. **Set your backend proxy URL**
+   In the project root, open your `package.json` file and set the `proxy` field to your backend server URL
+
+```json
+   // package.json
+   {
+     ...
+     "proxy": "http://your_proxy_address"
+   }
+```
+
+2. **Install dependencies**  
+   ```
+   npm install
+   ```
+
+3. **Start the development server**  
+   ```
+   npm start
+   ```
+
+This will launch the app at `http://localhost:3000` by default.
+
+---
+
+## 🧑‍💻 Author
+
+This frontend was built as part of the **Deep Think** project, an initiative to promote media literacy and critical thinking by leveraging generative AI. The UI is designed for simplicity, speed, and interpretability — helping users better understand and question the information they consume.
+
+---
+
+## 📜 License
+
+MIT License
