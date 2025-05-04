@@ -9,11 +9,25 @@
 }
 
 .intent-title-dot {
-    width: 12px;
-    height: 12px;
-    background: linear-gradient(to right, #82218c, #0603b2);
+    width: 16px;
+    height: 16px;
+    background: var(--gradient);
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.intent-title-dot::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: linear-gradient(to right, #82218c, #0603b2);
+border-radius: 50%;
+transform: scale(0.6);
 }
 
 .intent-title-text {

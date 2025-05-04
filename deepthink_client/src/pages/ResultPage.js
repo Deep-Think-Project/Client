@@ -38,8 +38,6 @@ function ResultPage() {
           {/* Summary of the analyzed text */}
           <Summary summary={result.results.summary} />
 
-          <div className="main-divider"></div>
-
           {/* Detected author intent */}
           <Intent intent={result.results.author_intent} />
 

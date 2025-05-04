@@ -64,21 +64,28 @@ function SearchBar({ setLoading }) {
 
   return (
     <div className="main-content">
-      {/* Instructional message for the user */}
-      <p className="instruction">URL 혹은 분석을 원하는 정보를 입력해주세요.</p>
-
-      {/* Input and submission container */}
-      <div className="search-container">
-        <input
-          type="text"
-          value={inputValue}
-          onChange={handleInputChange}
-          placeholder="url 혹은 정보 ex) 뉴스 기사, 블로그 등"
-        />
-        <button onClick={handleSubmit}>분석</button>
+      <div className="tagline-container">
+        <div className="tagline">당신이 생각할 기회를 제공합니다</div>
+      </div>
+      <div className="content-wrapper">
+        <h1 className="instruction">URL 혹은 분석을 원하는 정보를 입력해주세요.</h1>
+        <div className="search-container">
+          <div className="input-wrapper">
+            <input
+              type="text"
+              value={inputValue}
+              onChange={handleInputChange}
+              placeholder="url 혹은 정보 ex) 뉴스 기사, 블로그 등"
+            />
+          </div>
+          <button onClick={handleSubmit}>
+            분석
+            <span className="button-shine"></span>
+          </button>
+        </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default SearchBar;
+export default SearchBar
