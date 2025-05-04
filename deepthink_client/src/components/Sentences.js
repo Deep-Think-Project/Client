@@ -88,11 +88,20 @@ const Sentences = ({ sentences }) => {
         <div className="divider"></div>
 
         {/* Explanation Section */}
-        <div className="reason-display">
-          <div className="reason-title">
-            <div className="reason-title-dot"></div>
-            <div className="reason-title-text">이유</div>
-          </div>
+        <div className={`reason-display ${
+            selectedIndex !== null
+                ? sentences[selectedIndex].type === "clear_sentence"
+                ? "reason-green"
+                : "reason-purple"
+              : ""
+          }`}
+        >
+            {selectedIndex !== null && (
+            <div className="reason-title">
+              <div className="reason-title-dot"></div>
+              <div className="reason-title-text">이유</div>
+            </div>
+            )}
 
           <div className="reason-content">
             {selectedIndex !== null && selectedIndex < sentences.length ? (
