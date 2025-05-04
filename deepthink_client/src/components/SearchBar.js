@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../styles/SearchBar.css';
@@ -21,6 +21,49 @@ import '../styles/SearchBar.css';
 function SearchBar({ setLoading }) {
   const [inputValue, setInputValue] = useState(""); // Stores user input from the text field
   const navigate = useNavigate(); // Provides access to navigation API
+
+  // 1. Read 'auto_url' from query string and use it in input and handleSubmit
+  useEffect(() => {
+  const params = new URLSearchParams(window.location.search);
+  // Get the query parameter (?auto_url=...) from the browser URL
+  const autoUrl = params.get('auto_url');
+  // If auto_url exists,
+  if (autoUrl) {
+    const decodedUrl = decodeURIComponent(autoUrl);
+    // Automatically fill the input field with the decoded value
+    setInputValue(decodedUrl);
+    setTimeout(() => {
+      handleSubmitFromEffect(decodedUrl);
+    }, 300); // Slight delay to ensure input is updated before submitting
+  }
+  // eslint-disable-next-line
+}, []);
+
+// 2. Define a function inside useEffect to act like handleSubmit
+const handleSubmitFromEffect = async (url) => {
+  if (url.trim() !== "") {
+    setLoading(true);
+    navigate('/loading');
+
+    try {
+      const response = await axios.post('main_app/', {
+        input: url,
+      });
+
+      console.log('Server response:', response.data);
+
+      setTimeout(() => {
+        setLoading(false);
+        navigate('/result', { state: { result: response.data } });
+      }, 5000);
+    } catch (error) {
+      console.error('Server error:', error);
+      setLoading(false);
+    }
+  } else {
+    console.log('Please enter a valid input.');
+  }
+};
 
   /**
    * Handles changes in the input field
